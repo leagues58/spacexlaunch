@@ -18,67 +18,12 @@
     </header>
     <main>
       <section class="cards">
-        
-        <article>
-          <img class="article-img" src="http://placekitten.com/320/220" alt=" " />
-          <h1 class="article-title">
-            Launch 2
-          </h1>
-        </article>
-        <article>
-          <img class="article-img" src="http://placekitten.com/330/240" alt=" " />
-          <h1 class="article-title">
-            Launch 3
-          </h1>
-        </article>
-        <article>
-          <img class="article-img" src="http://placekitten.com/280/250" alt=" " />
-          <h1 class="article-title">
-            Launch 4
-          </h1>
-        </article>
-        <article>
-          <img class="article-img" src="http://placekitten.com/310/210" alt=" " />
-          <h1 class="article-title">
-            Launch 5
-          </h1>
-        </article>
-        <article>
-          <img class="article-img" src="http://placekitten.com/430/240" alt=" " />
-          <h1 class="article-title">
-            Launch 6 
-          </h1>
-        </article>
-                <article>
-          <img class="article-img" src="http://placekitten.com/430/240" alt=" " />
-          <h1 class="article-title">
-            Launch 7
-          </h1>
-        </article>
-                <article>
-          <img class="article-img" src="http://placekitten.com/430/240" alt=" " />
-          <h1 class="article-title">
-            Launch 8 
-          </h1>
-        </article>
-                <article>
-          <img class="article-img" src="http://placekitten.com/430/240" alt=" " />
-          <h1 class="article-title">
-            Launch 9 
-          </h1>
-        </article>
-                <article>
-          <img class="article-img" src="http://placekitten.com/430/240" alt=" " />
-          <h1 class="article-title">
-            Launch 10 
-          </h1>
-        </article>
-                <article>
-          <img class="article-img" src="http://placekitten.com/430/240" alt=" " />
-          <h1 class="article-title">
-            Launch 10
-          </h1>
-        </article>
+        {{#each datastuff}}
+          <article>
+            <p>{{name}}</p>
+            <p><b>{{location.name}}</b>: {{location.city}}, {{location.state}}</p>
+          </article>
+        {{/each}}
       </section>
     </main>
   </body>

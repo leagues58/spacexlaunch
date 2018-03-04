@@ -63,34 +63,5 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-/*
-// connect to database
-const MongoClient = require('mongodb').MongoClient;
-const assert = require('assert');
-var mongoose = require('mongoose');
-
-// Connection URL
-const url = 'mongodb://localhost:27017';
-
-// Database Name
-const dbName = 'spacexlaunch';
-
-//Import the mongoose module
-
-
-//Set up default mongoose connection
-var mongoDB = 'mongodb://127.0.0.1/my_database';
-mongoose.connect(mongoDB);
-// Get Mongoose to use the global promise library
-mongoose.Promise = global.Promise;
-//Get the default connection
-var db = mongoose.connection;
-
-//Bind connection to error event (to get notification of connection errors)
-db.on('error', console.error.bind(console, 'MongoDB connection error:'));
-
-
-*/
-
 // export the app object for use elsewhere (like www.js)
 module.exports = app;
