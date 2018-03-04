@@ -1,38 +1,32 @@
 #!/usr/bin/env node
 
-/**
- * Module dependencies.
- */
+/*****************************************************************************
+www.js
+application entry point: first script called by the npm start command.  This
+script requires the *actual* app entry point, app.js, then sets up and returns
+the express application (app) object.  Everything else is just setting up
+an HTTP server and listening along with some basic error handling.
+******************************************************************************/
 
-var app = require('../app');
+// Module dependencies
+var app   = require('../app');
 var debug = require('debug')('spacexlaunch.org:server');
-var http = require('http');
+var http  = require('http');
 
-/**
- * Get port from environment and store in Express.
- */
 
+// Get port from environment and store in Express app
 var port = normalizePort(process.env.PORT || '8080');
 app.set('port', port);
 
-/**
- * Create HTTP server.
- */
+// Create HTTP server.
+ var server = http.createServer(app);
 
-var server = http.createServer(app);
-
-/**
- * Listen on provided port, on all network interfaces.
- */
-
+// Listen on provided port, on all network interfaces
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
 
-/**
- * Normalize a port into a number, string, or false.
- */
-
+// Normalize a port into a number, string, or false
 function normalizePort(val) {
   var port = parseInt(val, 10);
 
@@ -49,10 +43,7 @@ function normalizePort(val) {
   return false;
 }
 
-/**
- * Event listener for HTTP server "error" event.
- */
-
+// Event listener for HTTP server "error" event
 function onError(error) {
   if (error.syscall !== 'listen') {
     throw error;
@@ -77,10 +68,7 @@ function onError(error) {
   }
 }
 
-/**
- * Event listener for HTTP server "listening" event.
- */
-
+// Event listener for HTTP server "listening" event
 function onListening() {
   var addr = server.address();
   var bind = typeof addr === 'string'
