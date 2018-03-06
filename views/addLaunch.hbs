@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add Launch</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+
+    <script src="/script.js" defer></script>
+  </head>
+ <body>
+<h1>{{title}}</h1>
+    <header>
+      <h1 class="heading">Add upcoming launches here.</h1>
+    </header>
+    <main>
+        {{message}}
+      <form action="" method="post">
+
+        <label for="launch_name">Name: </label>
+        <input type="text" name="launch_name" id="launch_name">
+
+        <label for="rocket_type">Rocket Type: </label>
+        <input type="text" name="rocket_type" id="rocket_type">
+
+        <hr>
+        <label for="location_name">Location Name: </label>
+        <input type="text" name="location_name" id="location_name">
+        
+        <label for="location_city">City: </label>
+        <input type="text" name="location_city" id="location_city">
+
+        <label for="location_state">State: </label>
+        <input type="text" name="location_state" id="location_state">
+
+        <hr>
+        <label for="notes">Notes: </label>
+        <input type="text" name="notes" id="notes">
+        <br>
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+  </body>
+</html>

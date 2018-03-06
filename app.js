@@ -15,8 +15,8 @@ var cookieParser  = require('cookie-parser');
 var bodyParser    = require('body-parser');
 
 // route modules we need
-var index = require('./routes/index.js');
-var users = require('./routes/users.js');
+var index     = require('./routes/index.js');
+var addLaunch = require('./routes/addLaunch.js');
 
 // create the app
 var app = express();
@@ -43,7 +43,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // set up routes using previously imported modules
 app.use('/', index);
-app.use('/users', users);
+app.use('/addlaunch', addLaunch);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -60,7 +60,7 @@ launch1.save(function (err) {
 
 
 // find all athletes who play tennis, selecting the 'name' and 'age' fields
-launchModel.find().select().exec().then(returneddata => {data = returneddata});
+launchModel.find().select().exec().then(returneddata => {data = returneddata;});
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
