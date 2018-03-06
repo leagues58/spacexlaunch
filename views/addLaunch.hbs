@@ -12,11 +12,12 @@
     <script src="/script.js" defer></script>
   </head>
  <body>
-<h1>{{title}}</h1>
+    {{>navHeader}}
     <header>
       <h1 class="heading">Add upcoming launches here.</h1>
     </header>
     <main>
+    <div class="main-form">
         {{message}}
       <form action="" method="post">
 
@@ -42,6 +43,7 @@
         <br>
         <button type="submit">Submit</button>
       </form>
+      </div>
     </main>
   </body>
 </html>

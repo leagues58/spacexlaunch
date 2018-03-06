@@ -5,7 +5,7 @@ var launchModel = require('../public/javascripts/launch_schema.js');
 
 
 var data = {
-  title: 'Add Launch'
+  title: 'spacexlaunch.org'
 }
 
 

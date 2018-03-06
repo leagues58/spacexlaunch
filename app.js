@@ -13,10 +13,12 @@ var favicon       = require('serve-favicon');
 var logger        = require('morgan');
 var cookieParser  = require('cookie-parser');
 var bodyParser    = require('body-parser');
+var hbs           = require('hbs');
 
 // route modules we need
 var index     = require('./routes/index.js');
 var addLaunch = require('./routes/addLaunch.js');
+var about     = require('./routes/about.js');
 
 // create the app
 var app = express();
@@ -27,6 +29,8 @@ app.disable('x-powered-by');
 // view engine setup. first set up where the templates are stored, then set the template type
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
+ 
+hbs.registerPartials(__dirname + '/views/partials');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -44,6 +48,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // set up routes using previously imported modules
 app.use('/', index);
 app.use('/addlaunch', addLaunch);
+app.use('/about', about);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
