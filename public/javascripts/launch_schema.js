@@ -6,6 +6,7 @@ var schema = mongoose.Schema;
 var launchSchema = new schema({    
     name: {type: String, required: true},
     rocket_type: String,
+    rocket_class: String,
     has_launched: Boolean,
     launch_successful: Boolean,
     location: {

@@ -19,6 +19,20 @@ header {
   grid-gap: 30px;
 }
 
+.card {
+  
+  height: 200px;
+}
+
+.falcon_9 {
+  background-image: url('../images/fal9.png');
+  background-repeat: no-repeat;
+}
+
+.falcon_heavy {
+  background-image: url('../images/falheavy.png');
+  background-repeat: no-repeat;
+}
 
 /* Generic styles ----------------------------------------------*/
 body {
