@@ -9,7 +9,7 @@ The route has a callback which is invoked whenever a GET request happens.
 
 var express = require('express');
 var router = express.Router();
-var launchModel = require('../public/javascripts/launch_schema.js');
+var launchModel = require('../models/launch_schema.js');
 
 
 
