@@ -7,12 +7,9 @@ The route has a callback which is invoked whenever a GET request happens.
 ******************************************************************************/
 
 
-var express = require('express');
-var router = express.Router();
-var launchModel = require('../models/launch_schema.js');
-
-
-
+var express       = require('express');
+var router        = express.Router();
+var launchModel   = require('../models/launch_schema.js');
 
 
 
@@ -22,8 +19,10 @@ var mongoose = require('mongoose');
 //Set up default mongoose connection
 var mongoDB = 'mongodb://127.0.0.1/spacexlaunch';
 mongoose.connect(mongoDB);
+
 // Get Mongoose to use the global promise library
 mongoose.Promise = global.Promise;
+
 //Get the default connection
 var db = mongoose.connection;
 
@@ -59,7 +58,7 @@ launch1.save(function (err) {
 */
 
 
-// find all athletes who play tennis, selecting the 'name' and 'age' fields
+// find all the launch data
 launchModel.find().select().exec().then(returneddata => {data = returneddata;});
 
 /* GET home page. */

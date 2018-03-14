@@ -12,16 +12,60 @@ header {
 }
 
 
+
+
+
+/* Theme Color Variables  ***************************************/
+
+:root {
+  --main-bg-color: coral;
+  --main-txt-color: blue; 
+  --main-padding: 15px; 
+  
+/* Grey scheme */
+  --primary-color: #546e7a;
+  --dark-color: #29434e;
+  --light-color: #819ca9;
+  --text-color: #ffffff;
+
+
+  /* Orange scheme 
+  --primary-color: #ff9800;
+  --dark-color: #c66900;
+  --light-color: #ffc947;
+  --text-color: #000000;*/
+
+  /* Blue scheme 
+  --primary-color: #2979ff;
+  --dark-color: #004ecb;
+  --light-color: #75a7ff;
+  --text-color: #000000;
+  */
+}
+
+
 /* Grid styles -------------------------------------------------*/
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-gap: 30px;
+  grid-gap: 5px;
 }
 
 .card {
-  
+  border: black 1px solid;
+  padding:10px;
+  padding-left: 12%;
   height: 200px;
+  background-position-x: 5%;
+  background-color: var(--main-bg-color);
+  /* background-color: #0b2d66; */
+  /* color: white; */
+  color: var(--text-color);
+  background-color: var(--light-color);
+}
+
+.card:hover {
+  border: 1px solid white;
 }
 
 .falcon_9 {
@@ -37,13 +81,22 @@ header {
 /* Generic styles ----------------------------------------------*/
 body {
   font-family: 'Quicksand', sans-serif;
+  background-color: var(--primary-color);
+  /*background-color: #0f3b82;*/
+  /*background: linear-gradient(#0f3b82, #2657a5);*/
+  /* background: linear-gradient(to bottom right, #1b4382, #14376d); */
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 25px;
 }
 
 header {
   padding: 10px;
   font-size: 2em;
-  color: white;
-  background-color: #333;
+  /* color: white; */
+  /* background-color: #071b3d; */
   margin-bottom: 40px;
 }
 
@@ -53,26 +106,34 @@ h1 {
 
 #site-title {
   text-decoration: none;
+  color: white;
 }
 
 a {
-  color: black;
+  /* color:white; */
+  /* color: black; */
+  color: var(--text-color) ;
 }
 
 .nav {
   text-align: right;
   margin-bottom: 10px;
+  
 }
 
 .nav-item {
 margin-left: 20px;
 margin-right: 20px;
+/* color:white; */
+color: var(--text-color);
 }
 
 .main-form {
   margin-left: auto;
   margin-right: auto;
   width: 75%;
+  background-color: white;
+  height: 500px;
 }
 
 .logo {
@@ -84,10 +145,10 @@ margin-right: 20px;
   height: 240px;
   margin-bottom: 30px;
   padding: 30px;
-  color: white;
+  /* color: white; */
   background: url('https://cdn.glitch.com/a5121e34-96b3-4a70-8227-040c51e64fae%2Fcat.jpg?1509635989509') center #333 no-repeat;
   background-size: cover;
-  color: white;
+  /* color: white; */
   text-shadow: 0px 0px 5px #000;
 }
 
@@ -129,5 +190,16 @@ article {
   bottom: 0;
   width: 100%;
   padding: 10px;
-  background-color: rgba(255, 255, 255, 0.2);
+  /* background-color: rgba(255, 255, 255, 0.2); */
 }
+
+
+ /* about us page -------------------------------------------------*/
+ .about-us-content {
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  /* background-color: #071b3d; */
+  height: 500px;
+  /* color:white; */
+ }
