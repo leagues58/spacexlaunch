@@ -16,10 +16,17 @@
     <main>
       <section class="cards">
         {{#each datastuff}}
-          <article class="card {{rocket_class}}">
+          <a href="#{{id}}" class="card {{rocket_class}}">
             <p>{{name}}</p>
             <p><b>{{location.name}}</b>: {{location.city}}, {{location.state}}</p>
-          </article>
+          </a>
+          <a href="#_" class="lightbox" id="{{id}}">
+            <div class="large-card">
+              <h2>{{name}}</h2>
+              <p><b>{{location.name}}</b>: {{location.city}}, {{location.state}}</p>
+              <p>{{notes}}</p>
+            </div>
+          </a>
         {{/each}}
       </section>
     </main>
