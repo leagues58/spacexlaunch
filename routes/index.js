@@ -10,6 +10,7 @@ The route has a callback which is invoked whenever a GET request happens.
 var express       = require('express');
 var router        = express.Router();
 var launchModel   = require('../models/launch_schema.js');
+var User          = require('../models/user_schema.js');
 
 
 
@@ -45,6 +46,23 @@ var data = {
     notes: 'First launch recorded in our database!'
 }
 
+// code that will add launches or admin users. For easy data entry only; will be deleted soon
+/*
+var userData = {
+  email:'leagues58@gmail.com',
+  username: 'leagues58',
+  password: 'twinrocketsfall'
+}
+
+//use the model to enter some data
+var user = new User(userData);
+
+// Save the new model instance, passing a callback
+user.save(function (err) {
+  if (err) console.log(err);
+  // saved!
+});
+*/
 
 //use the model to enter some data
 /*var launch1 = new launchModel(data);

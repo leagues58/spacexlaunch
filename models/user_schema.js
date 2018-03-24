@@ -6,7 +6,8 @@ users will have accounts and privileges to view the page which lets you do
 this.
 ******************************************************************************/
 
-var mongoose = require('mongoose');
+var mongoose    = require('mongoose');
+var bcrypt      = require('bcrypt');
 
 var UserSchema = new mongoose.Schema({
   email: {
@@ -24,13 +25,22 @@ var UserSchema = new mongoose.Schema({
   password: {
     type: String,
     required: true,
-  },
-  passwordConf: {
-    type: String,
-    required: true,
   }
 });
 var User = mongoose.model('User', UserSchema);
+
+//hashing a password before saving it to the database
+UserSchema.pre('save', function (next) {
+    var user = this;
+    bcrypt.hash(user.password, 10, function (err, hash){
+      if (err) {
+        return next(err);
+      }
+      user.password = hash;
+      next();
+    })
+  });
+
 module.exports = User;
 
 
