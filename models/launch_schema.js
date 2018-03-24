@@ -1,9 +1,8 @@
 // grab the things we need
 var mongoose = require('mongoose');
-var schema = mongoose.Schema;
 
 // create a schema
-var launchSchema = new schema({    
+var launchSchema = new mongoose.Schema({    
     name: {type: String, required: true},
     rocket_type: String,
     rocket_class: String,
