@@ -15,7 +15,7 @@ var data = {
 
 // GET listener
 router.get('/', function(req, res, next) {
-  res.render('addLaunch', data);
+  res.render('controller', data);
 });
 
 

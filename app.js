@@ -16,9 +16,9 @@ var bodyParser    = require('body-parser');
 var hbs           = require('hbs');
 
 // route modules we need
-var index     = require('./routes/index.js');
-var addLaunch = require('./routes/addLaunch.js');
-var about     = require('./routes/about.js');
+var index       = require('./routes/index.js');
+var controller  = require('./routes/controller.js');
+var about       = require('./routes/about.js');
 
 // create the app
 var app = express();
@@ -47,7 +47,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // set up routes using previously imported modules
 app.use('/', index);
-app.use('/addlaunch', addLaunch);
+app.use('/controller', controller);
 app.use('/about', about);
 
 // catch 404 and forward to error handler
