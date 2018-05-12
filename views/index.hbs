@@ -4,31 +4,65 @@
     <title>spacexlaunch.org</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../stylesheets/materialize.min.css"  media="screen,projection"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
   </head>
+
  <body>
-    {{>navHeader}}
-    <header>
-      <h1 class="heading">All launches.</h1>
-    </header>
-    <main>
-      <section class="cards">
-        {{#each datastuff}}
-          <a href="#{{id}}" class="card {{rocket_class}}">
-            <p>{{name}}</p>
-            <p><b>{{location.name}}</b>: {{location.city}}, {{location.state}}</p>
-          </a>
-          <a href="#_" class="lightbox" id="{{id}}">
-            <div class="large-card">
-              <h2>{{name}}</h2>
+    {{>navbar}}
+    <div class="container">
+      <header>
+        <h1 class="heading">Upcoming launches.</h1>
+      </header>
+        <!--<section class="cards">
+          {{#each datastuff}}
+            <a href="#{{name}}" class="card {{rocket_class}}">
+              <p>{{launch_date}}</p>
+              <p>{{name}}</p>
               <p><b>{{location.name}}</b>: {{location.city}}, {{location.state}}</p>
-              <p>{{notes}}</p>
-            </div>
-          </a>
-        {{/each}}
-      </section>
-    </main>
+            </a>
+            <a href="#_" class="lightbox" id="{{name}}">
+              <div class="large-card {{rocket_class}}">
+                <h2>{{name}}</h2>
+                <p><b>{{location.name}}</b>: {{location.city}}, {{location.state}}</p>
+                <p>{{notes}}</p>
+              </div>
+            </a>
+          {{/each}}
+        </section>
+        -->
+    </div>
+    <script type="text/javascript" src="../javascripts/materialize.js"></script>
+    <script>
+        // init dropdown
+        var elemSelect = document.querySelector('select');
+        var instanceSelect = M.FormSelect.init(elemSelect, {});
+
+        // init navbar
+        var elemNav = document.querySelector('.sidenav');
+        var instanceNav = M.Sidenav.init(elemNav, {});
+
+        // init FAB
+        elemFAB = document.querySelector('.fixed-action-btn');
+        instanceFAB = M.FloatingActionButton.init(elemFAB, {});
+    </script>
   </body>
 </html>
+
+
+
+
+
+
+
+
+

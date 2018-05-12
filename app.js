@@ -1,6 +1,6 @@
 
 /*****************************************************************************
-index.js
+app.js
 creates an express application object (app), deals with some settings and 
 middleware assocatied with the app, then exports the app object.
 ******************************************************************************/
@@ -17,7 +17,6 @@ var hbs           = require('hbs');
 
 // route modules we need
 var index       = require('./routes/index.js');
-var controller  = require('./routes/controller.js');
 var about       = require('./routes/about.js');
 
 // create the app
@@ -47,12 +46,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // set up routes using previously imported modules
 app.use('/', index);
-app.use('/controller', controller);
 app.use('/about', about);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  var err = new Error('Not Found');
+  var err = new Error('Doesn\'t Look Like \''+ req.url + '\' Exists...');
   err.status = 404;
   next(err);
 });

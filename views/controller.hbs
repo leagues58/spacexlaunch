@@ -11,11 +11,22 @@
  <body>
     {{>navHeader}}
     <header>
-      <h1 class="heading">Add upcoming launches here.</h1>
+      <h1 class="heading">Edit and Add Upcoming Launches.</h1>
     </header>
     <main>
     <div class="main-form">
         {{message}}
+        {{#if datastuff}}
+          <ul>
+          {{#each datastuff}}
+            <li>
+              <p><b>{{name}}</b></p>
+              <p>{{location.name}}: {{location.city}}, {{location.state}}</p>
+            </li>
+          {{/each}}
+          </ul>
+        {{/if}}
+        
       <form action="" method="post">
 
         <label for="launch_name">Name: </label>

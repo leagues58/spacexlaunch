@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>about!</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <head>
+        <title>spacexlaunch.org</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 
-  </head>
- <body>
-    {{>navHeader}}
-    <header>
-      <h1 class="heading">About.</h1>
-    </header>
-    <main>
-        <div class="about-us-content">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="../stylesheets/materialize.min.css"  media="screen,projection"/>
+
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    </head>
+    <body>
+        {{>navbar}}
+        <div class="container">
+            <header>
+                <h1 class="heading">About.</h1>
+            </header>
+            
             <div class="about-info">
                 <h2>Background</h2>
-
             </div>
 
             <div class="contact-us">
                 <div class="contact-us-header">
-                    <h2>Cont    act Us</h2>
+                    <h2>Contact Us</h2>
                 </div>
                 <form action="/" id="contact-form" name="contact-form">
                     <label for="email-input">Email:</label>
@@ -34,8 +42,7 @@
                     <label for="comment-input">Comment:</label>
                     <input type="text" name="comment-input">
                 </form>
-            </div>
+            </div> 
         </div>
-    </main>
-  </body>
+    </body>
 </html>

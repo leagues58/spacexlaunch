@@ -4,9 +4,7 @@ var launchModel = require('../models/launch_schema.js');
 //var bodyParser  = require('body-parser');
 
 
-var data = {
-  title: 'spacexlaunch.org'
-}
+var data = {};
 
 
 
@@ -15,7 +13,15 @@ var data = {
 
 // GET listener
 router.get('/', function(req, res, next) {
-  res.render('controller', data);
+  if(req.query.pass == 'eric') {
+
+    // find all the launch data
+    launchModel.find().select().exec().then(returneddata => {data = returneddata;});
+
+    res.render('controller', { title: 'spacexlaunch.org', datastuff: data});
+  } else {
+    res.redirect('/');
+  }
 });
 
 
