@@ -10,7 +10,7 @@ var router = express.Router();
 
 
 router.get('/', function(req, res, next) {
-    res.render('about', { });
+    res.render('about', {title: 'about' });
   });
   
   

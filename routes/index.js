@@ -81,7 +81,7 @@ launchModel.find().select().exec().then(returneddata => {data = returneddata;});
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'spacexlaunch.org', datastuff: data});
+  res.render('index', { title: '', datastuff: data});
 });
 
 
