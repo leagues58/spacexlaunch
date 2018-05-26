@@ -45,66 +45,13 @@ header {
 
 
 
-/* Lightbox styles **********************************************/
-.lightbox {
-  display: flex;
-  align-items: center;
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  width: 100%;
-  height: 100%;
-  /* text-align: center; */
-  justify-content: center;
-  top: 0;
-  left: 0;
-  background: black;
-  background: rgba(0,0,0,0.8);
-}
-
-.lightbox .large-card {
-  align-items: center;
-  /* max-width: 90%; */
-  /* max-height: 80%; */
-  margin-top: 300px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 40%;
-  background-color: var(--light-color);
-  padding: 15px;
-}
-
-.lightbox:target {
-  /** Show lightbox when it is target */
-  display: block;
-
-  /** Remove default browser outline style */
-  outline: none;
-}
-
-
-/* Grid styles -------------------------------------------------*/
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-gap: 5px;
-}
-
-.card {
-  border: black 1px solid;
-  padding:10px;
-  padding-left: 12%;
-  height: 200px;
-  background-position-x: 5%;
-  background-color: var(--main-bg-color);
-  /* background-color: #0b2d66; */
-  /* color: white; */
-  color: var(--text-color);
-  background-color: var(--light-color);
+.card-image img{
+  max-width:40%;
+  max-height:100%;
 }
 
 .card:hover {
-  border: 1px solid white;
+  /*border: 1px solid white;*/
 }
 
 .falcon_9 {
@@ -153,36 +100,6 @@ a {
   /* color: black; */
   color: var(--text-color);
   text-decoration: none;
-}
-
-.nav {
-  text-align: right;
-  margin-bottom: 10px;
-  
-}
-
-.nav-item {
-margin-left: 20px;
-margin-right: 20px;
-/* color:white; */
-color: var(--text-color);
-}
-
-.main-form {
-  margin-left: auto;
-  margin-right: auto;
-  width: 75%;
-  background-color: white;
-}
-
-.main-form li{
-  border-bottom: 1px solid black;
-  list-style-type: none;
-}
-
-.logo {
-  height: 50px;
-  margin-right: 20px;
 }
 
 .leading {
