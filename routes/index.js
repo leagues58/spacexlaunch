@@ -59,7 +59,7 @@ router.get('/', function(req, res, next) {
                console.log('error writing new data to file');
                console.log(err);
             }
-            objLaunches = JSON.parse(body);
+            objLaunches = body;
             console.log("The file was saved!");
          }); 
 
