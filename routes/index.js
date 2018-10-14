@@ -13,7 +13,7 @@ var fs            = require('fs');
 var request       = require('request');
 
 let date      = new Date();
-let fileName  = "launchdata/" + date.getFullYear() + date.getMonth() + date.getDay() + date.getHours() + '.txt'
+let fileName  = "launchdata/" + date.getFullYear() + date.getMonth() + date.getDate() + date.getHours() + '.txt'
 
 var objLaunches;
 
@@ -44,7 +44,6 @@ router.get('/', function(req, res, next) {
          if (err) throw err;
          console.log('reading file');
          objLaunches = JSON.parse(data);
-         console.log('reading file, Emily');
        });      
 
    // if there is no file, hit the API and write contents to file

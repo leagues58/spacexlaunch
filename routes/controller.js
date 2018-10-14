@@ -1,15 +1,9 @@
 var express     = require('express');
 var router      = express.Router();
 var launchModel = require('../models/launch_schema.js');
-//var bodyParser  = require('body-parser');
 
 
 var data = {};
-
-
-
-
-
 
 // GET listener
 router.get('/', function(req, res, next) {
