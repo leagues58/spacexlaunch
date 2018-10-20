@@ -5,4 +5,7 @@
     width: 2%;
     float: left;
     /* background: red; */
+    margin-right: 50px;
+    margin-top: 20px;
+    /* border-right: 1px solid white; */
 }
