@@ -65,10 +65,6 @@ function getLaunchDataFromAPI(dataFile) {
 }
 
 function renderPage(res, launchData) {
-  launchData.forEach(element => {
-    //element.launch_date_utc = element.launch_date_utc;
-  });
-
   res.render('index', { title: '', launches: launchData});
 }
 
